@@ -16,7 +16,17 @@
     "comma-dangle": 0,  // not sure why airbnb turned this on. gross!
     "indent": [2, 2, {"SwitchCase": 1}],
     "no-console": 0,
-    "no-alert": 0
+    "no-alert": 0,
+    space-before-function-paren: 0,
+    // не работает [2, "as-needed"],
+    func-names: 0,
+    "react/prop-types": 0,
+    "id-length": 0,
+    camelcase: 0,
+    "spaced-comment": 0,
+    "no-unused-vars": 0,
+    "no-debugger": 0,
+    //"no-undef": 0,
   },
   "plugins": [
     "react", "import"

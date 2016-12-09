@@ -17,6 +17,12 @@ import {
   processingOrder,
   serverResponse,
 } from './order';
+import {
+  cart,
+  products,
+  productsLoadOffset,
+} from './product_list';
+// import cart from './cart';
 
 export default combineReducers({
   routing: routerReducer,
@@ -31,9 +37,13 @@ export default combineReducers({
   info,
   pagination,
   widgets,
-  // order reducers
+  // order
   orderProducts,
   productId_quantity,
   processingOrder,
   serverResponse,
+  // product_list
+  cart,
+  products,
+  productsLoadOffset,
 });

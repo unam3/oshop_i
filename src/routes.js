@@ -14,6 +14,7 @@ import {
     Pagination,
   } from 'containers';
 import Order from 'containers/Order/Order.js';
+import ProductList from 'containers/ProductList/ProductList.js';
 
 export default (store) => {
   const requireLogin = (nextState, replace, cb) => {
@@ -56,6 +57,7 @@ export default (store) => {
 
       { /* my routes */ }
       <Route path="order" component={Order}/>
+      <Route path="product_list" component={ProductList}/>
 
       { /* Catch all route */ }
       <Route path="*" component={NotFound} status={404} />

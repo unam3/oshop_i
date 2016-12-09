@@ -11,6 +11,7 @@ export default function ({
   onShowMoreProducts,
   onAddToCart
 }) {
+  require('./ProductList.css');
   // ~ componentDidMount
   if (products.length === 0 && productsLoadOffset === 0) {
     onShowMoreProducts();

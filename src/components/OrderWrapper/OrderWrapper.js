@@ -15,6 +15,7 @@ export default function ({
   /* eslint no-shadow: 0 */
   handleServerResponse,
 }) {
+  require('./OrderWrapper.css');
   const redirect = path => setTimeout(
     () => window.location = path,
     6000

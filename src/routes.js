@@ -13,6 +13,7 @@ import {
     NotFound,
     Pagination,
   } from 'containers';
+import Order from 'containers/Order/Order.js';
 
 export default (store) => {
   const requireLogin = (nextState, replace, cb) => {
@@ -52,6 +53,9 @@ export default (store) => {
       <Route path="pagination" component={Pagination}/>
       <Route path="survey" component={Survey}/>
       <Route path="widgets" component={Widgets}/>
+
+      { /* my routes */ }
+      <Route path="order" component={Order}/>
 
       { /* Catch all route */ }
       <Route path="*" component={NotFound} status={404} />

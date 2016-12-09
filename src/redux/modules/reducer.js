@@ -10,6 +10,14 @@ import {reducer as form} from 'redux-form';
 import info from './info';
 import widgets from './widgets';
 
+import {
+  orderProducts,
+/* eslint camelcase: 0 */
+  productId_quantity,
+  processingOrder,
+  serverResponse,
+} from './order';
+
 export default combineReducers({
   routing: routerReducer,
   reduxAsyncConnect,
@@ -22,5 +30,10 @@ export default combineReducers({
   }),
   info,
   pagination,
-  widgets
+  widgets,
+  // order reducers
+  orderProducts,
+  productId_quantity,
+  processingOrder,
+  serverResponse,
 });

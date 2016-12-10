@@ -12,7 +12,9 @@ export default ({
   toggleProcessingOrderStatus,
   /* eslint no-shadow: 0 */
   handleServerResponse
-}) => (
+}) => {
+  require('./Order.css');
+  return (
   <div className="order flex-column">
     <h1 className="title">Оформление заказа</h1>
     <OrderProducts
@@ -27,5 +29,5 @@ export default ({
   <Form productId_quantity={productId_quantity}
     toggleProcessingOrderStatus={toggleProcessingOrderStatus}
     handleServerResponse={handleServerResponse} />
-  </div>
-);
+  </div>);
+};

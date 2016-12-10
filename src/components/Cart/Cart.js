@@ -2,7 +2,7 @@ const React = require('react');
 const { connect } = require('react-redux');
 
 const Cart = ({cart}) => {
-  //require('./Cart.css');
+  require('./Cart.css');
   const productsCount = Object.keys(cart).length;
   return (
     <div className="cart blue-text">

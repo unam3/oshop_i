@@ -2,6 +2,8 @@ const React = require('react');
 const applyF = require('../../helpers/applyF.js');
 
 module.exports = function (props) {
+  require('./BlueButton.css');
+
   let className = 'button-blue';
 
   if (props.additionalClasses) {

@@ -12,8 +12,13 @@ export default function ({
   onAddToCart
 }) {
   require('./ProductList.css');
-  // ~ componentDidMount
-  if (products.length === 0 && productsLoadOffset === 0) {
+
+  // Первое условие предотвращает server rendering. Устанавливается
+  // Без него на сервере изменяется productsLoadOffset, products при этом
+  // почему-то не изменяется и остается [].
+  // __CLIENT__ устанавливается в конфигах вебпака, и в bin/server.js
+  // устанавливается в false.
+  if (__CLIENT__ && products.length === 0 && productsLoadOffset === 0) {
     onShowMoreProducts();
   }
 

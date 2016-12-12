@@ -138,14 +138,10 @@ export const products = function (state = 'silly bastards', action) {
   }
 };
 
-export const showMore = function (state, action) {
-  return state + 6;
-};
-
 export const productsLoadOffset = function (state = 'silly bastards', action) {
   switch (action.type) {
     case 'show_more':
-      return showMore(state, action);
+      return state + 6;
     default:
       return state;
   }

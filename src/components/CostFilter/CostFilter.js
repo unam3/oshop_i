@@ -2,6 +2,8 @@ const React = require('react');
 import { Filter } from '../Filter/Filter';
 
 export const CostFilter = function () {
+  require('./CostFilter.css');
+
   // можно с reduce пройти в начале по всем элементам, найти min/max и
   // выставить defaultValue
   const filter = (<div className="cost-filter flex-row">

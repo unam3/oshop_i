@@ -1,5 +1,5 @@
 const { connect } = require('react-redux');
-const ProductList = require('../../components/ProductList/ProductList');
+const ProductList = require('../RealProductList/RealProductList');
 const allProducts = require('../../helpers/products.js');
 
 const productsCategory = Object.keys(allProducts)[0];

@@ -8,7 +8,7 @@ import { push } from 'react-router-redux';
 import config from '../../config';
 import { asyncConnect } from 'redux-async-connect';
 import Nav from '../../components/Nav/Nav.js';
-import { ConnectedCart } from '../../components/Cart/Cart.js';
+import { ConnectedCart } from '../../containers/Cart/Cart.js';
 
 @asyncConnect([{
   promise: ({store: {dispatch, getState}}) => {

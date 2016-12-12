@@ -15,12 +15,7 @@ export default class ProductList extends React.Component {
       onShowMoreProducts,
     } = this.props;
 
-    // Первое условие предотвращает server rendering.
-    // Без него на сервере изменяется productsLoadOffset, products при этом
-    // почему-то не изменяется и остается [].
-    // __CLIENT__ устанавливается в конфигах вебпака, и в bin/server.js
-    // устанавливается в false.
-    if (__CLIENT__ && products.length === 0 && productsLoadOffset === 0) {
+    if (products.length === 0 && productsLoadOffset === 0) {
       onShowMoreProducts();
     }
   }

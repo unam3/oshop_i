@@ -2,6 +2,8 @@ const React = require('react');
 import { Filter } from '../Filter/Filter';
 
 export const BrandFilter = function ({products}) {
+  require('./BrandFilter.css');
+
   const brandsObj = {};
 
   products.forEach(function (product) {

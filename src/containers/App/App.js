@@ -1,16 +1,13 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { IndexLink } from 'react-router';
-import { LinkContainer } from 'react-router-bootstrap';
-import Navbar from 'react-bootstrap/lib/Navbar';
-import Nav from 'react-bootstrap/lib/Nav';
-import NavItem from 'react-bootstrap/lib/NavItem';
 import Helmet from 'react-helmet';
 import { isLoaded as isInfoLoaded, load as loadInfo } from 'redux/modules/info';
 import { isLoaded as isAuthLoaded, load as loadAuth, logout } from 'redux/modules/auth';
 import { push } from 'react-router-redux';
 import config from '../../config';
 import { asyncConnect } from 'redux-async-connect';
+import Nav from '../../components/Nav/Nav.js';
 import { ConnectedCart } from '../../components/Cart/Cart.js';
 
 @asyncConnect([{
@@ -59,30 +56,28 @@ export default class App extends Component {
 
   render() {
     const {user} = this.props;
-    const styles = require('./App.scss');
+    const styles = {};// require('./App.scss');
+    require('./App.css');
 
     return (
       <div className={styles.app}>
+        <header className="flex-row">
+          <img id="logo" alt="logo" />
+          <Nav />
+          <ConnectedCart />
+        </header>
         <Helmet {...config.app.head}/>
-        <Navbar fixedTop>
-          <Navbar.Collapse eventKey={0}>
-            <Nav navbar>
-              <NavItem >Раздел 1</NavItem>
-              <NavItem >Раздел 2</NavItem>
-              <NavItem >Раздел 3</NavItem>
-              <NavItem >Раздел 4</NavItem>
-              {/*
-              <LinkContainer to="">
-                <NavItem >Раздел 4</NavItem>
-              </LinkContainer>
-              */}
-              <ConnectedCart />
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-        <div className={styles.appContent}>
-          {this.props.children}
-        </div>
+        <section id="main">
+          <div className={styles.appContent}>
+            {this.props.children}
+          </div>
+        </section>
+        <footer className="flex-row">
+          <section className="copyright">
+            Company name — 2016
+          </section>
+          <Nav />
+        </footer>
       </div>
     );
   }

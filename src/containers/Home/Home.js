@@ -75,18 +75,10 @@ erikras/react-redux-universal-hot-example</a>
             </code>
           </p>
           <p>
-          Сборка и запуск сервера для разработки:
+          Сборка и запуск:
             <br/>
             <code>
               npm run dev
-            </code>
-          </p>
-          <p>
-          Сборка и запуск проекта:
-            <br/>
-            <code>
-              npm run build
-              npm run start
             </code>
           </p>
 

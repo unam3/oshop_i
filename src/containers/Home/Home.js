@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { GithubButton } from 'components';
 import Helmet from 'react-helmet';
 
 const styles = {};
@@ -25,24 +24,10 @@ export default function() {
         </p>
         <p>
 Проект собирается webpack. Используются react-компоненты, redux-react для
-управления состоянием, html собирается pug (jade), именование css-классов
-согласно методологии БЭМ.
+управления состоянием, именование css-классов согласно методологии БЭМ.
         </p>
-        <GithubButton user="unam3"
-                      repo="oshop_i"
-                      type="star"
-                      width={160}
-                      height={30}
-                      count large/>
-        <GithubButton user="unam3"
-                      repo="oshop_i"
-                      type="fork"
-                      width={160}
-                      height={30}
-                      count large/>
-
         <p className={styles.humility}>
-          Forked and edited by <a href="https://github.com/unam3">unam3</a> from <a href="https://github.com/erikras/react-redux-universal-hot-example">
+          <a href="https://github.com/unam3/oshop">unam3/oshop</a> перенесен на <a href="https://github.com/erikras/react-redux-universal-hot-example">
 erikras/react-redux-universal-hot-example</a>
         </p>
 
@@ -96,11 +81,22 @@ erikras/react-redux-universal-hot-example</a>
               npm run dev
             </code>
           </p>
+          <p>
+          Сборка и запуск проекта:
+            <br/>
+            <code>
+              npm run build
+              npm run start
+            </code>
+          </p>
 
-        <h3>From the author</h3>
+        <h3>Примечания</h3>
 
         <p>
-          Набор взят для тестового задания.
+          В dev-сборке поломаны цвета ссылок бутстрапом. Если выставить в
+переменных бутстрапа изначальный черный — изменится цвет текста в
+redux dev-panel.
+
         </p>
         <p>
           Непонятно почему eslint съедает невалидный json-конфиг. Некоторые
@@ -108,7 +104,7 @@ erikras/react-redux-universal-hot-example</a>
         </p>
         <p>
           Для центрирования содержимого страницы раскомментировать у `body`
-правило `margin: auto;` в `src/css/common.css`
+правило `margin: auto;` в `src/containers/App/App.css`.
         </p>
       </div>
     </div>

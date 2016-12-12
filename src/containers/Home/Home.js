@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 const styles = {};
 
 export default function() {
+  require('./Home.css');
   return (
     <div className={styles.home}>
       <Helmet title="Oshop"/>
@@ -95,8 +96,8 @@ redux dev-panel.
 правила из него бы убрал.
         </p>
         <p>
-          Для центрирования содержимого страницы раскомментировать у `body`
-правило `margin: auto;` в `src/containers/App/App.css`.
+          Для центрирования содержимого страницы раскомментировать у
+<code>body</code> правило <code>margin: auto;</code> в <code>src/containers/App/App.css</code>.
         </p>
       </div>
     </div>

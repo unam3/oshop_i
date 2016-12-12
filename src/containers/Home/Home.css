@@ -1,0 +1,13 @@
+p {
+  margin-bottom: 16px;
+  font-size: 1.3em;
+}
+
+li {
+  display: list-item;
+  font-size: 1.3em;
+}
+
+p a {
+  color: #4078c0;
+}

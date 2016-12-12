@@ -12,6 +12,7 @@
 
 module.exports = {
   preBootstrapCustomizations: './src/theme/variables.scss',
+  // выпилил navbar; не нужно
   mainSass: './src/theme/bootstrap.overrides.scss',
   verbose: false,
   debug: false,
@@ -31,10 +32,10 @@ module.exports = {
   },
   styles: {
     mixins: true,
-    normalize: true,
+    normalize: false,
     print: true,
     glyphicons: true,
-    scaffolding: true,
+    scaffolding: false,
     type: true,
     code: true,
     grid: true,
@@ -48,7 +49,7 @@ module.exports = {
     navs: true,
     navbar: true,
     breadcrumbs: true,
-    pagination: true,
+    pagination: false,
     pager: true,
     labels: true,
     badges: true,

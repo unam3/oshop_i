@@ -2,7 +2,6 @@ import { createStore as _createStore, applyMiddleware, compose } from 'redux';
 import createMiddleware from './middleware/clientMiddleware';
 import { routerMiddleware } from 'react-router-redux';
 import thunk from 'redux-thunk';
-import Immutable from 'immutable';
 import { initialState as order } from './modules/order.js';
 import { initialState as cart } from './modules/cart.js';
 import { initialState as productList } from './modules/product_list.js';
@@ -27,9 +26,6 @@ export default function createStore(history, client, data) {
   }
 
   const reducer = require('./modules/reducer');
-  if (data) {
-    data.pagination = Immutable.fromJS(data.pagination);
-  }
 
   const composedData = {
     cart: cart,

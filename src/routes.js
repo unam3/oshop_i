@@ -11,7 +11,6 @@ import {
     LoginSuccess,
     Survey,
     NotFound,
-    Pagination,
   } from 'containers';
 import Order from 'containers/Order/Order.js';
 import ProductList from 'containers/ProductList/ProductList.js';
@@ -51,7 +50,6 @@ export default (store) => {
       { /* Routes */ }
       <Route path="about" component={About}/>
       <Route path="login" component={Login}/>
-      <Route path="pagination" component={Pagination}/>
       <Route path="survey" component={Survey}/>
       <Route path="widgets" component={Widgets}/>
 

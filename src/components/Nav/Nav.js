@@ -2,21 +2,21 @@ import React from 'react';
 import { LinkContainer } from 'react-router-bootstrap';
 
 export default () => {
-  require('./Nav.css');
+  const style = require('./Nav.scss');
 
   return (
-    <div className="nav">
+    <div className={style.nav}>
       <LinkContainer to="">
-        <a className="nav__link" href="">Раздел 1</a>
+        <a className={style.nav__link} href="">Раздел 1</a>
       </LinkContainer>
       <LinkContainer to="">
-        <a className="nav__link" href="">Раздел 2</a>
+        <a className={style.nav__link} href="">Раздел 2</a>
       </LinkContainer>
       <LinkContainer to="">
-        <a className="nav__link" href="">Раздел 3</a>
+        <a className={style.nav__link} href="">Раздел 3</a>
       </LinkContainer>
       <LinkContainer to="">
-        <a className="nav__link" href="">Раздел 4</a>
+        <a className={style.nav__link} href="">Раздел 4</a>
       </LinkContainer>
     </div>
   );

@@ -34,6 +34,7 @@ erikras/react-redux-universal-hot-example</a>
   Ставим пакеты для сборки проекта:
 ```
 npm install
+```
 
 
   Сборка и запуск сервера для разработки:

@@ -6,11 +6,13 @@ const styles = {};
 
 export default function() {
   require('./Home.css');
+
   return (
     <div className={styles.home}>
       <Helmet title="Oshop"/>
       <div className={styles.masthead}>
         <h1>Oshop</h1>
+
         <p>
 Часть условного интернет-магазина. Воображаемый крупный проект с множеством
 разделов и непрерывным циклом разработкив котором постоянно будут происходить
@@ -33,9 +35,10 @@ erikras/react-redux-universal-hot-example</a>
         </p>
 
         <h2>Сверстанные страницы</h2>
+
         <h3>
           <Link to="/product_list">
-            Список товаров (кликабельно)
+            Список товаров
           </Link>
         </h3>
         <ol>
@@ -46,9 +49,10 @@ erikras/react-redux-universal-hot-example</a>
             Добавление в корзину и изменение количества товаров в блоке корзины без перезагрузки страницы.
           </li>
         </ol>
+
         <h3>
           <Link to="/order">
-            Оформление заказа (в оригинале задания "Корзина") (кликабельно)
+            Оформление заказа (в оригинале задания "Корзина")
           </Link>
         </h3>
         <ol>
@@ -64,7 +68,6 @@ erikras/react-redux-universal-hot-example</a>
         </ol>
 
         <h2>Сборка проекта</h2>
-
           <p>
             Команды запускаем из дирекктории проекта.
           </p>
@@ -96,8 +99,7 @@ erikras/react-redux-universal-hot-example</a>
 правила из него бы убрал.
         </p>
         <p>
-          Для центрирования содержимого страницы раскомментировать у
-<code>body</code> правило <code>margin: auto;</code> в <code>src/containers/App/App.css</code>.
+          Для центрирования содержимого страницы раскомментировать у <code>body</code> правило <code>margin: auto;</code> в <code>src/containers/App/App.css</code>.
         </p>
       </div>
     </div>

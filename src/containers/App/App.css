@@ -36,9 +36,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-  /*
   margin: auto;
-  */
   max-width: 1000px;
   font-size: 0.8em;
 }
@@ -58,7 +56,7 @@ table {
 	border-spacing: 0;
 }
 a {
-  color: #333333;
+  color: #4078c0;
 }
 
 /* убираем управляющие элементы */
@@ -135,4 +133,8 @@ footer {
 
 .link-wo-underline {
   text-decoration: none;
+}
+
+.text-color {
+  color: #333333;
 }

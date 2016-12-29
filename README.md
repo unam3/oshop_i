@@ -45,8 +45,3 @@ npm run dev
 ```
 npm run build && npm run start
 ```
-
-##Примечания
-
-- Для центрирования содержимого страницы раскомментировать у `body` правило
-`margin: auto;` в `src/containers/App/App.css`

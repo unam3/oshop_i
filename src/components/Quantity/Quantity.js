@@ -6,9 +6,13 @@ export default ({onQuantityChange, productId}) => (
     <input className="quantity"
       onChange={(e) => {
         e.preventDefault();
+
+        const inputValue = e.target.value;
+
         onQuantityChange({
           id: productId,
-          quantity: parseInt(e.target.value, 10)
+          // in case of manual deleted input number (value === '')
+          quantity: inputValue !== '' ? parseInt(inputValue, 10) : 0
         });
       }}
       type="number" min="1" defaultValue="1" />
